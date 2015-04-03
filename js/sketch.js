@@ -38,10 +38,22 @@ for (var i = 0; i < totalWorkers; i ++){
   workers.push(worker);
 }
 
-setInterval(function(){
-  var hotslow = loadImage("hotslow.png?v=" + Math.random());
-}, 1)
+var totalImages = 0;
 
+function addImage(){
+  var img = document.createElement('img');
+  img.src = "hotslow.png?v=" + Math.random();
+  // img.style.position = 'absolute'
+  // img.style.top = '0'
+  // img.style.left = '0'
+  // if (totalImages < 100) {
+  //   document.body.appendChild(img);
+  //   totalImages++;
+  // }
+  setTimeout(addImage, 5);
+}
+
+addImage();
 
 document.getElementById('intense').addEventListener('click', function(e){
   e.preventDefault();
