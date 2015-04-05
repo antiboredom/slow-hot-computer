@@ -6,6 +6,7 @@ var container = document.getElementById('container');
 
 function preload() {
   img = loadImage("hotslow.png");
+  addImage();
 }
 
 function setup() {
@@ -42,7 +43,7 @@ var totalImages = 0;
 
 function addImage(){
   var img = document.createElement('img');
-  img.src = "hotslow.png?v=" + Math.random();
+  img.src = "http://slow-hot-computer.s3.amazonaws.com/hotslow.png?v=" + Math.random();
   // img.style.position = 'absolute'
   // img.style.top = '0'
   // img.style.left = '0'
@@ -50,10 +51,9 @@ function addImage(){
   //   document.body.appendChild(img);
   //   totalImages++;
   // }
-  setTimeout(addImage, 5);
+  setTimeout(addImage, 100);
 }
 
-addImage();
 
 document.getElementById('intense').addEventListener('click', function(e){
   e.preventDefault();
