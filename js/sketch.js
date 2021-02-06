@@ -43,7 +43,7 @@ var totalImages = 0;
 
 function addImage(){
   var img = document.createElement('img');
-  img.src = "http://slow-hot-computer.s3.amazonaws.com/hotslow.png?v=" + Math.random();
+  img.src = "http://slowhotcomputer.com/hotslow.png?v=" + Math.random();
   // img.style.position = 'absolute'
   // img.style.top = '0'
   // img.style.left = '0'
