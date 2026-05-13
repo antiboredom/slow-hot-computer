@@ -63,3 +63,13 @@ document.getElementById('intense').addEventListener('click', function(e){
     container.style.display = 'block';
   }, 3000)
 });
+
+
+const paramsString = window.location.search;
+const searchParams = new URLSearchParams(paramsString);
+
+if (searchParams.has("auto")) {
+  container.style.display = 'none';
+}
+
+
