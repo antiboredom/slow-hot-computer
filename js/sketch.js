@@ -69,4 +69,7 @@ const searchParams = new URLSearchParams(paramsString);
 
 if (searchParams.has("auto")) {
   container.style.display = 'none';
+  setTimeout(() => {
+    window.location = window.location.href;
+  }, 5 * 60 * 1000)
 }
